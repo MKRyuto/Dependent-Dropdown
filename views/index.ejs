@@ -1,0 +1,22 @@
+<%- include("header") -%>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <main class="px-3">
+        <form>
+            <label for="provinsi" class="form-label">Provinsi</label>
+            <select class="form-select" id="provinsi">
+                <option selected="selected" value="">Pilih Provinsi</option>
+                <% items.forEach((item) => { %>
+                <option value="<%= item.id %>"><%= item.nama %></option>
+                <% }) %>
+            </select>
+            <label for="kabupaten" class="form-label">Kabupaten</label>
+            <select class="form-select" id="kabupaten">
+                <option value="" selected="selected">Pilih Kabupaten</option>
+            </select>
+        </form>
+    </main>
+    <footer class="mt-auto text-white-50">
+        Copyright 2021 MKRyuto Training
+    </footer>
+</div>
+<%- include("footer") -%>
